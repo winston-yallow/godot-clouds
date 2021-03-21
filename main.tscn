@@ -1,0 +1,290 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://camera.gd" type="Script" id=1]
+[ext_resource path="res://freight_station_4k.hdr" type="Texture" id=2]
+[ext_resource path="res://cloudplane.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 4000.0
+bottom_radius = 4000.0
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 10, 100, 10 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.47451, 0.47451, 0.47451, 1 )
+
+[sub_resource type="PanoramaSky" id=5]
+panorama = ExtResource( 2 )
+
+[sub_resource type="Environment" id=6]
+background_mode = 2
+background_sky = SubResource( 5 )
+tonemap_mode = 2
+tonemap_exposure = 0.6
+dof_blur_far_enabled = true
+dof_blur_far_distance = 1000.0
+dof_blur_far_transition = 1000.0
+dof_blur_far_quality = 2
+dof_blur_near_distance = 100.0
+dof_blur_near_transition = 100.0
+glow_enabled = true
+glow_bicubic_upscale = true
+
+[node name="Main" type="Spatial"]
+
+[node name="Ground" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Buildings" type="Spatial" parent="."]
+
+[node name="MeshInstance2" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -182.137, 49.5278, 77.6081 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6014, 49.5278, -22.3902 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0582, 49.5278, 26.3239 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.7751, 49.5278, 57.082 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6143, 49.5278, -41.1093 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance7" type="MeshInstance" parent="Buildings"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -149.251, 49.5278, -313.832 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance8" type="MeshInstance" parent="Buildings"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -82.1813, 49.5278, -83.1681 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance9" type="MeshInstance" parent="Buildings"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -122.927, 49.5278, -342.89 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance10" type="MeshInstance" parent="Buildings"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 217.8, 49.5278, 55.2604 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance11" type="MeshInstance" parent="Buildings"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -100.9, 49.5278, -14.9525 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance12" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22.1481, 49.5278, -90.6764 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance13" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.45329, 49.5278, -68.2862 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance14" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.91011, 49.5278, -117 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance15" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 59.9232, 49.5278, -147.758 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance16" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 65.7624, 49.5278, -49.5671 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance17" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 293.511, 49.5278, -16.6233 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance18" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 95.3917, 49.5278, -68.074 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance19" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 267.187, 49.5278, 12.4349 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance20" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 15.9195, 49.5278, -130.45 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance21" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 114.111, 49.5278, -136.29 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance22" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 73.5378, 49.5278, 107.92 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance23" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 98.1398, 49.5278, 85.5301 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance24" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 102.596, 49.5278, 134.244 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance25" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 35.7628, 49.5278, 165.002 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance26" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 29.9238, 49.5278, 66.811 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance27" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 231.498, 49.5278, 104.719 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance28" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 256.1, 49.5278, 82.3292 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance29" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 260.556, 49.5278, 131.043 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance30" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 193.723, 49.5278, 161.801 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance31" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 187.884, 49.5278, 63.6101 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance32" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -204.172, 49.5278, -66.0776 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance33" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -179.57, 49.5278, -88.4678 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance34" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -175.114, 49.5278, -39.7537 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance35" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -241.947, 49.5278, -8.99557 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance36" type="MeshInstance" parent="Buildings"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -247.786, 49.5278, -107.187 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance37" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -125.239, 49.5278, -206.23 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance38" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -147.629, 49.5278, -230.832 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance39" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -98.9147, 49.5278, -235.288 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance40" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -68.1565, 49.5278, -168.455 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance41" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -166.348, 49.5278, -162.616 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance42" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 17.0258, 49.5278, -310.939 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance43" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 41.6278, 49.5278, -333.329 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance44" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 46.0838, 49.5278, -284.615 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance45" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -20.7491, 49.5278, -253.857 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance46" type="MeshInstance" parent="Buildings"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -26.5882, 49.5278, -352.048 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="Cloudplane" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 77, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.724571, 0.343652, -0.597411, -0.666885, -0.568382, 0.481878, -0.173959, 0.747559, 0.64101, 21.2882, 93.5729, -12.1514 )
+directional_shadow_max_distance = 200.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 6 )
+
+[node name="MovingCamera" type="Camera" parent="."]
+transform = Transform( -0.866025, 0.12941, 0.482963, 0, 0.965926, -0.258819, -0.5, -0.224144, -0.836516, 171.035, 9.99997, -145.533 )
+current = true
+fov = 50.0
+far = 50000.0
+script = ExtResource( 1 )
+
+[node name="StaticCamera" type="Camera" parent="."]
+transform = Transform( -0.843626, 0.111699, 0.525185, 0, 0.978122, -0.208031, -0.536931, -0.175501, -0.825169, 136.246, 42.4238, -99.017 )
+fov = 30.0
+far = 50000.0
