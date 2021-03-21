@@ -283,6 +283,7 @@ current = true
 fov = 50.0
 far = 50000.0
 script = ExtResource( 1 )
+move_cloudplane = true
 
 [node name="StaticCamera" type="Camera" parent="."]
 transform = Transform( -0.843626, 0.111699, 0.525185, 0, 0.978122, -0.208031, -0.536931, -0.175501, -0.825169, 136.246, 42.4238, -99.017 )
